@@ -6,7 +6,7 @@ import plotly.express as px
 
 st.set_page_config( page_title='ZAHRAT ASIR PROJECTS',page_icon=None,layout="wide",initial_sidebar_state="auto",menu_items=None )
 
-file_path=r"C:\\Users\\a\\Desktop\\zahra\\zahra.csv"
+file_path="zahra.csv"
 
 df=pd.read_csv(file_path)
 
@@ -16,7 +16,7 @@ df=pd.read_csv(file_path)
 
 
 st.sidebar.header('ZAHRAT DASHBOARD')
-zahra_image=r"C:\\Users\\a\\Desktop\\zahra\\zahra.jpg"
+zahra_image="zahra.jpg"
 st.sidebar.image(zahra_image)
 st.sidebar.write("Zahra is dash board is used for learning")
 st.sidebar.markdown("Made by HAKEM")
@@ -59,4 +59,5 @@ with c2:
 with c3:
     fig=px.pie(data_frame=df,names='item',hole=0.4,values='total',color=cat_filter)
     st.plotly_chart(fig,use_container_width = True)
+
 
